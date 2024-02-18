@@ -116,6 +116,14 @@ create table bill
         foreign key (pr_id) references prescription (pr_id)
 );
 
+create table prescription_queue
+(
+    pr_id  int        not null,
+    status VARCHAR(1) not null,
+    constraint prescription_queue_prescription_pr_id_fk
+        foreign key (pr_id) references prescription (pr_id)
+);
+
 INSERT INTO hospital.user_login (user_id, user_name, password)
 VALUES (1, 'admin', 'Admin@123');
 
