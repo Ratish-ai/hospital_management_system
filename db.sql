@@ -171,3 +171,10 @@ alter table doctor
 
 INSERT INTO hospital.doctor (d_id, d_name, specialist, from_time, to_time, relieve)
 VALUES (3, 'Doctor', 'General', '10:00:00', '12:00:00', 'N');
+
+alter table patient
+    add mob_no VARCHAR(10) not null after weight;
+
+UPDATE hospital.patient t
+SET t.mob_no = '9876543210'
+WHERE t.p_id = 5;
