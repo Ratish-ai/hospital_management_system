@@ -1,0 +1,2 @@
+class receptionist:
+    pass

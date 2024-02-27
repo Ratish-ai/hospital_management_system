@@ -1,4 +1,4 @@
-from db import db
+from model.db import db
 
 class user_login:
 
@@ -20,7 +20,7 @@ class user_login_db(db):
         super().__init__()
     
     def check_u_name(self,u_name):
-        query = f"SELECT u_name FROM user_login WHERE user_name = '{u_name}';"
+        query = f"SELECT user_name FROM user_login WHERE user_name = '{u_name}';"
         self._mycursor.execute(query)
         res = self._mycursor.fetchone()
         if res[0] is None:

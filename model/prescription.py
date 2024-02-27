@@ -1,5 +1,5 @@
-from db import db
-from medicine import medicine
+from model.db import db
+from model.medicine import medicine
 
 class prescription:
 

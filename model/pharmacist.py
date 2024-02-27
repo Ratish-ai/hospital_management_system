@@ -1,4 +1,4 @@
-from db import db
+from model.db import db
 
 class pharmacist:
 

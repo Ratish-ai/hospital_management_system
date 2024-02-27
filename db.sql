@@ -178,3 +178,10 @@ alter table patient
 UPDATE hospital.patient t
 SET t.mob_no = '9876543210'
 WHERE t.p_id = 5;
+
+alter table bill
+    add bill_id int not null first;
+
+alter table bill
+    add constraint bill_pk
+        primary key (bill_id);
